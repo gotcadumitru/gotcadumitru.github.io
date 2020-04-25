@@ -1,0 +1,367 @@
+body{
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	-webkit-font-smoothing:antialiased; /*
+	am facut ca sa fie mai зглаженые fonturile*/
+	font-size: 14px;
+	color: #6c7279;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+p{
+	margin: 0 0 10px;
+}
+
+/*CONTAINER*/
+.container{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+/*HEADER*/
+
+.header{
+	height: 100px;
+	/*De aici*/
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	/*pana aici facem ca header sa fie 
+	deasupra la sloiuri si alineat
+	pe centru*/
+}
+.header__inner{
+	padding: 35px 0;
+	display: flex;
+	justify-content: space-between; /*Ca
+	sa impartim acele 2 elemente in partea
+	stanga si dreapta a ecranului*/
+	border-bottom: 1px solid #505369;
+	align-items: center;/*Sa aliniem pe
+	orizontala textul*/
+}
+
+
+/*NACIGATION*/
+.nav{
+display: flex;
+}
+.nav__link{
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 700px;
+	text-transform: uppercase;
+	color: #fff;
+	padding-right: 50px;
+	opacity: 0.75;
+
+	transition: opacity .2s linear;
+}
+.nav__link:last-child{
+	padding-right: 0px;
+}
+.nav__link:hover{
+	opacity: 1;
+	text-decoration: underline;
+}
+/*INTRO*/
+.intro{
+	display: flex;
+	flex-direction: column;
+	/*Fiecare element noi din
+	intro va incepe cu rand nou*/
+	justify-content: center;
+	padding-top: 100px;
+	height: 750px;
+	background: #31344f url("../images/intro.jpg")
+	center no-repeat;/* punem si culoare in caz 
+	de
+	interetu e slab si fotografia inca nu 
+	sa uncarcat*/
+}
+.intro__title{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 65px;
+	margin-bottom: 30px;
+	color: #fff;
+	font-weight: 700;
+
+	line-height: 1.1;/*distanta intre linii
+	 txt*/
+	
+	text-transform: uppercase;
+	text-align: center;
+}
+.intro__inner{
+	max-width: 970px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.intro__subtitle{
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	margin-bottom: 70px;
+	font-weight: 400;
+	text-align: center;
+	color: #fff;
+	line-height: 1.4;
+
+}
+/*BUTTON*/
+.btn{
+	display: inline-block; /* ca sa putem 
+	pune paddinguri, marimea .....*/
+	vertical-align: top;
+	font-size: 13px;
+
+	/*Asta facem ca cand scriem cu
+	<button> sun diferente si trebuie sa
+	le excludem*/
+	font-family: 'Raleway', sans-serif;
+	border: 0;
+	cursor: pointer;
+
+
+	border-radius:2px;/*facem colturile 
+	rotunde*/
+
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+
+}
+.btn--red{
+	background-color: #2a9a77;
+	padding: 15px 40px; 
+}
+.btn--red:hover{
+	background-color: #4acba2;
+	transition: background .2s linear;
+}
+
+/*WE ARE*/
+.we_are_container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.we__are{
+	margin: 110px 0;
+}.we__are__info{
+	text-align: center;
+	width: 33.333%;
+	margin-bottom: 60px;
+}
+.we__are__icon{
+	margin-bottom: 35px;
+}
+
+.we__are__title{
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 30px;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #000;
+
+}
+.we__are__text{
+	max-width: 300px;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-weight: 400;
+	font-size: 14px;
+}
+/*WORKS*/
+.works__item{
+	position: relative;
+	width: 25%;
+
+	height: 350px;
+	width: 469px;
+}
+.works{
+	display: flex;
+	flex-wrap: wrap;
+}
+.works__text{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	justify-content: center;
+	background-color: #4acba2;
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+	text-align: center;
+	transition: opacity .2s linear;
+}
+.works__text:hover{
+	opacity: 0.9;
+	cursor: pointer;
+	
+
+}
+.works__image{
+	position: absolute;
+	border-bottom: 1px solid #fff;
+}
+.works__name{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.works__subname{
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/*TEAM_____________________*/
+.team_content{
+	display: flex;
+	justify-content: space-between;
+}
+.team{
+	margin-top: 90px;
+	margin-bottom: 50px;
+}
+.team__item{
+	max-width: 255px;
+	font-family: 'Raleway', sans-serif;
+}
+.team_name{
+	font-size: 22px;
+	font-weight: 300px;
+	color: #000;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+.team_prof{
+	font-size: 13px;
+	font-weight: 300px;
+	color: #e84545;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+.team__descr{
+	width: 100%;
+	font-size: 14px;
+	font-weight: 300px;
+	color: #6c7279;
+	line-height: 1.5;
+}
+.team__social{
+	margin-top: 40px;
+	display: flex;
+}
+.facebook{
+	border: 1px solid #e8ecee;
+	padding: 10px 15px;
+	margin-right: 5px;
+}
+
+.internet{
+	border: 1px solid #e8ecee;
+	padding: 10px 11px;
+	margin-right: 5px;
+}
+.twitter{
+	border: 1px solid #e8ecee;
+	padding: 10px 11px;
+	margin-right: 5px;
+}
+.in{
+	border: 1px solid #e8ecee;
+	padding: 10px 11px;
+	margin-right: 5px;
+}
+.wiki{
+	border: 1px solid #e8ecee;
+	padding: 10px 11px;
+	margin-right: 5px;
+}
+	
+/*Video--------------*/
+.video_sat{
+	height: 700px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+}
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+/*LOCAION---------------------------*/
+
+.footer{
+	width: 100%;
+	background-color: #1ba251;
+}
+.footer_info{
+	display: flex;
+	
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+	padding-top: 60px;
+	color: #fff;
+}
+.footer_name{
+	flex: 1 1 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.footer_info_title{
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.footer_info_subtitle{
+	opacity: .5;
+	font-size: 14px;
+}
+.footer_link{
+		text-decoration: none;
+		color: #fff;
+
+}
+.team__social--footer{
+	margin: 0 auto;
+	justify-content: center;
+}
+.subsol{
+	width: 100%;
+	background-color: #075627;
+}
+.subsol_text{
+	text-align: center;
+	padding: 25px 0;
+}
+.made{
+	justify-content: center;
+	display: flex;
+}
+.made_name{
+	color: #fff;
+	cursor: pointer;
+}
+.made div{
+	margin-right: 3px;
+}

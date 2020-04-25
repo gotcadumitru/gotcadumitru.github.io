@@ -237,6 +237,7 @@ display: flex;
 }
 .team{
 	margin-top: 90px;
+	margin-bottom: 50px;
 }
 .team__item{
 	max-width: 255px;
